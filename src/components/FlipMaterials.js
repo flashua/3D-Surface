@@ -1,4 +1,4 @@
-import THREE from 'three';
+import * as THREE from "three";
 
 export default class FlipMaterials extends THREE.MeshFaceMaterial {
     constructor(shading) {
@@ -23,18 +23,18 @@ export default class FlipMaterials extends THREE.MeshFaceMaterial {
         });
 
         super([solidMaterial, heatMaterial]);
-        this.defaultSet = [this.materials[0], this.materials[1]];
+        this.defaultSet = [this[0], this[1]];
     }
 
-    heat(isHeat) {
+    heat = (isHeat) => {
         if (isHeat) {
-            this.materials[0] = this.defaultSet[1];
-            this.materials[1] = this.defaultSet[0];
+            this[0] = this.defaultSet[1];
+            this[1] = this.defaultSet[0];
         } else {
-            this.materials[0] = this.defaultSet[0];
-            this.materials[1] = this.defaultSet[1];
+            this[0] = this.defaultSet[0];
+            this[1] = this.defaultSet[1];
         }
-    }
+    };
 
     static generateHeat(geometry) {
         geometry.computeBoundingBox();
@@ -51,7 +51,7 @@ export default class FlipMaterials extends THREE.MeshFaceMaterial {
         });
 
         geometry.faces.forEach((face) => {
-            faceSymbols.forEach((symbol, i)=> {
+            faceSymbols.forEach((symbol, i) => {
                 face.vertexColors[i] = geometry.colors[face[symbol]];
             });
         });

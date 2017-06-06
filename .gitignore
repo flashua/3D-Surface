@@ -1,21 +1,20 @@
-.project
-.classpath
-.settings
-.metadata
-target/
-bin/
-.springBeans
-MANIFEST.MF
-*.iml
-*.ipr
-*.iws
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
 .DS_Store
+.env.development.local
+.env.test.local
+.env.production.local
 .idea
-Makefile
-#
-# ignore build directories
-**/target/*
-
-# ignore nodejs modules
-**/node_modules/*
-
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

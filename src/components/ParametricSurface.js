@@ -1,6 +1,6 @@
-import THREE from 'three';
-import FlipMaterials from './FlipMaterials.jsx';
-import Data from '../data.jsx';
+import * as THREE from "three";
+import FlipMaterials from "./FlipMaterials.js";
+import Data from "../data.js";
 
 export default class ParametricSurface {
     constructor() {
@@ -12,7 +12,7 @@ export default class ParametricSurface {
     }
 
     static height() {
-        return Data[0] && Data[0].length || 0;
+        return Data[0] ? Data[0].length : 0;
     }
 
     static width() {

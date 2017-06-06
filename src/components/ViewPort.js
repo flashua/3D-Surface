@@ -1,8 +1,8 @@
-import React from 'react';
-import Scene from './Scene.jsx';
+import React from "react";
+import Scene from "./Scene.js";
 
-import VertexSurface from './VertexSurface.jsx';
-import ParametricSurface from './ParametricSurface.jsx';
+import VertexSurface from "./VertexSurface.js";
+import ParametricSurface from "./ParametricSurface.js";
 
 export default class ViewPort extends React.Component {
     render() {

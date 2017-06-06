@@ -1,4 +1,4 @@
-import THREE from 'three';
+import * as THREE from "three";
 
 export default class Grid {
     constructor(size = 10, color = 0x000000, step = 5) {

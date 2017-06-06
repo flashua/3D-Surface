@@ -1,13 +1,13 @@
-import THREE from 'three';
-import Grid from './Grid.jsx';
-import orbiter from 'three-orbit-controls';
-import Data from '../data.jsx';
+import * as THREE from "three";
+import Grid from "./Grid.js";
+import orbiter from "three-orbit-controls";
+import Data from "../data.js";
 
 export default class Scene extends THREE.Scene {
     constructor(dom = document.body, options = {}) {
         super();
         const width = Data.length;
-        const height = Data[0] && Data[0].length || 0;
+        const height = Data[0] ? Data[0].length : 0;
 
         this.wrapper = new THREE.Object3D();
         this.wrapper.rotation.x -= Math.PI / 2;
