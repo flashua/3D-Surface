@@ -1,24 +1,52 @@
 {
   "name": "vertex-surface",
+  "author": "Oleksandr Pastukhov",
+  "license": "MIT",
   "version": "1.2.1",
   "repository": "https://github.com/flashua/3D-Surface.git",
   "description": "3D Surface",
   "main": "src/index.js",
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-tap-event-plugin": "^2.0.1",
-    "material-ui": "^0.18.2",
-    "three": "^0.85.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "three": "^0.92.0",
     "three-orbit-controls": "^82.1.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-scripts": "1.1.4",
+    "prettier": "^1.12.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "prettier": "prettier --write \"./**/*.js\""
   },
-  "author": "Oleksandr Pastukhov",
-  "license": "MIT"
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "semi": false
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "indent": [
+        1,
+        2
+      ],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "strict": [
+        2,
+        "never"
+      ],
+      "semi": [
+        2,
+        "never"
+      ]
+    }
+  }
 }

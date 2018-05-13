@@ -1,8 +1,25 @@
-import React from "react";
-import ReactDom from "react-dom";
-import injectTapEventPlugin from "react-tap-event-plugin";
-import App from "./components/App.js";
+import React from 'react'
+import { render } from 'react-dom'
+import ViewPort from './ViewPort.js'
 
-injectTapEventPlugin();
-ReactDom.render(<App />, document.getElementById('main'));
+class ForToggle extends React.PureComponent {
+  state = {
+    isHeat: false,
+  }
 
+  render() {
+    return (
+      <div>
+        <input
+          type="checkbox"
+          style={{ position: 'absolute' }}
+          checked={this.state.heat}
+          onChange={() => this.setState({ heat: !this.state.heat })}
+        />
+        <ViewPort isHeat={this.state.isHeat} />
+      </div>
+    )
+  }
+}
+
+render(<ForToggle />, document.getElementById('root'))

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "3D Surface",
+  "name": "Reusable 3D surface drawer",
   "icons": [
     {
       "src": "favicon.ico",
