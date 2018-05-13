@@ -13,8 +13,8 @@ class ForToggle extends React.PureComponent {
         <input
           type="checkbox"
           style={{ position: 'absolute' }}
-          checked={this.state.heat}
-          onChange={() => this.setState({ heat: !this.state.heat })}
+          checked={this.state.isHeat}
+          onChange={() => this.setState({ isHeat: !this.state.isHeat })}
         />
         <ViewPort isHeat={this.state.isHeat} />
       </div>
