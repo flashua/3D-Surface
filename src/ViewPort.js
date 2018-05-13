@@ -6,7 +6,7 @@ import VertexSurface from './VertexSurface.js'
 export default class ViewPort extends React.PureComponent {
   render() {
     if (this.vertexSurface) {
-      this.vertexSurface.material.heat(this.props.heat)
+      this.vertexSurface.material.heat(this.props.isHeat)
     }
 
     return <section ref={dom => !this.scene && this.run(dom)} id="surface-keeper" />
